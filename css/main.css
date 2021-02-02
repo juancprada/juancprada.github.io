@@ -90,7 +90,8 @@ table {
 body {
 	background-color: #1F2123;
 	color: #F5F1F1;
-	/* background-image: url("../assets/images/test.png"); */
+	font-family: 'Neue Machina';
+	font-weight: 400;
 }
 
 a {
