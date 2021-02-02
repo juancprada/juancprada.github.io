@@ -1,0 +1,158 @@
+/* CSS Reset */
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* /CSS Reset */
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+
+/* @Font-Face */
+
+@font-face {
+	font-family: 'Right Grotesk';
+	src: url(../webfonts/RightGrotesk-TallFine.woff2) format('woff2'), url(../webfonts/fonts/RightGrotesk-TallFine.woff) format('woff');
+	font-weight: 100;
+}
+
+@font-face {
+	font-family: 'Monument Extended';
+	src: url(../webfonts/MonumentExtended-Regular.woff2) format('woff2'), url(../webfonts/MonumentExtended-Regular.woff) format('woff');
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'Neue Machina';
+	src: url(../webfonts/NeueMachina-Regular.woff2) format('woff2'), url(../webfonts/NeueMachina-Regular.woff) format('woff');
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'Neue Machina';
+	src: url(../webfonts/NeueMachina-Ultrabold.woff2) format('woff2'), url(../webfonts/NeueMachina-Ultrabold.woff) format('woff');
+	font-weight: 800;
+}
+
+/* /@Font-Face */
+
+body {
+	background-color: #1F2123;
+	color: #F5F1F1;
+	/* background-image: url("../assets/images/test.png"); */
+}
+
+a {
+	text-decoration: none;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 2% 5%;
+}
+
+h2, h3 {
+	font-family: 'Right Grotesk';
+}
+
+h2, h3, h4, header, footer, .subtitle {
+	text-transform: uppercase;
+}
+
+h4, footer, footer span a, .subtitle {
+	color: #7C848C;
+}
+
+header nav, h4, .subtitle {
+	font-family: 'Monument Extended';
+	font-size: 12px;
+}
+
+header nav a {
+	color: #F5F1F1;
+}
+
+.main-nav {
+	margin: 0 40px;
+}
+
+header nav a:hover {
+	background: -webkit-linear-gradient(180deg, #99CC6C, #CB50EA);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	overflow: hidden;
+	font-family: 'Monument Extended';
+	font-size: 10px;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding: 2% 5%;
+}
+
+footer span a:hover {
+	text-decoration: underline;
+}
