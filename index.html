@@ -2,7 +2,22 @@
 <html lang="en" dir="ltr">
   <head>
 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Juan Carlos Prada &middot; Graphic Designer">
+    <meta name="description" content="I'm Juan Carlos Prada, graphic designer focused on digital media and illustration.">
+    <meta name="author" content="Juan Carlos Prada">
+    <meta name="keywords" content="graphic design, illustration, UI, UX, visual design, interface">
+
+    <meta property="og:title" content="Juan Carlos Prada &middot; Graphic Designer">
+    <meta property="og:description" content="I'm Juan Carlos Prada, graphic designer focused on digital media and illustration.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Juan Carlos Prada &middot; Graphic Designer">
+    <meta property="og:url" content="https://juanprada.co">
+    <meta property="og:image" content="https://juanprada.co/assets/images/og.png">
+
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
 
     <title>Juan Carlos Prada &middot; Graphic Designer</title>
 
@@ -11,9 +26,62 @@
     <![endif]-->
 
   </head>
+
   <body>
 
-    This site is under construction. Thank you.
+    <!-- Video background -->
+    <video playsinline loop muted autoplay poster="assets/images/home-background.png" class="background-video">
+      <source src="assets/videos/video-background.mp4" type="video/mp4">
+    </video>
+
+    <nav id="mobile-nav">
+      <a href="#" class="close-mobile-menu"><img src="assets/images/close-icon.svg" alt="Close menu icon">
+      <div>
+        <a href="#">Interface</a>
+        <a href="#">Online Media</a>
+        <a href="#">Illustration</a>
+        <a href="#">About</a>
+      </div>
+    </nav>
+
+    <header>
+      <h1>
+        <img src="assets/images/logo.svg" alt="Juan Carlos Prada &middot; Graphic Designer">
+      </h1>
+      <nav class="default-nav">
+        <a href="interface" class="main-nav">Interface</a>
+        <a href="online-media" class="main-nav">Online Media</a>
+        <a href="illustration" class="main-nav">Illustration</a>
+        <a href="about" class="main-nav toggle-display">About</a>
+      </nav>
+      <nav class="mobile-menu-nav">
+        <a href="#" class="mobile-menu"><img src="assets/images/mobile-menu-icon.svg" alt="Mobile menu icon"></a>
+      </nav>
+      <nav>
+        <a href="about">About</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="intro-home">
+        <h2>Hi there, I'm Juan</h2>
+        <p class="big-text">Graphic designer focused on digital media and illustration.</p>
+        <p class="big-text">Based in Bogot&aacute;, Colombia.</p>
+        <nav>
+          <span>&rarr; <a href="interface">See my work</a></span>
+          <span>&rarr; <a href="mailto:jcp@juanprada.co"> Get in touch</a></span>
+        </nav>
+      </section>
+    </main>
+
+    <footer>
+      <span>&copy; Juan Carlos Prada &rarr; <a href="mailto:jcp@juanprada.co">jcp@juanprada.co</a></span>
+      <span><a href="es">ES</a></span>
+    </footer>
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="js/main.js"></script>
 
   </body>
-</html>
+
+  </html>

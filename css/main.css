@@ -87,11 +87,43 @@ table {
 
 /* /@Font-Face */
 
+::-moz-selection { /* Code for Firefox */
+  color: #1F2123;
+  background: #F5F1F1;
+}
+
+::selection {
+  color: #1F2123;
+  background: #F5F1F1;
+}
+
 body {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
 	background-color: #1F2123;
 	color: #F5F1F1;
-	font-family: 'Neue Machina';
+	font-family: 'Neue Machina', sans-serif;
 	font-weight: 400;
+}
+
+main {
+	flex: 1;
+}
+
+p, ul, h5 {
+	line-height: 1.4;
+}
+
+video {
+  object-fit: cover;
+	opacity: 0.4;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+	z-index: -1;
 }
 
 a {
@@ -107,22 +139,52 @@ header {
 	top: 0;
 	left: 0;
 	width: 100%;
-	padding: 2% 5%;
+	height: 100px;
+	padding: 3vh 5vw;
+	z-index: 1;
+	transition: top 0.2s ease-out;
 }
 
-h2, h3 {
-	font-family: 'Right Grotesk';
+h1 img {
+	image-rendering: crisp-edges;
+	image-rendering: -moz-crisp-edges;
+	image-rendering: -webkit-optimize-contrast;
+	width: 50px;
+	height: auto;
 }
 
-h2, h3, h4, header, footer, .subtitle {
+h2, h4 {
+	font-family: 'Right Grotesk', sans-serif;
+}
+
+h2 {
+	font-size: 184px;
+}
+
+h3 {
+	font-family: 'Monument Extended';
+	font-size: 24px;
+	width: max-content;
+	width: -moz-max-content;
+}
+
+h4 {
+	font-size: 112px;
+}
+
+h2, h3, h4, h5, header, footer, .intro-home nav, #mobile-nav {
 	text-transform: uppercase;
 }
 
-h4, footer, footer span a, .subtitle {
+h5, footer, footer span a, .caption, .bottom-info p:last-child, .bottom-info p:last-child a {
 	color: #7C848C;
 }
 
-header nav, h4, .subtitle {
+strong {
+	font-weight: 800;
+}
+
+header nav, h5, footer, .intro-home nav, #mobile-nav {
 	font-family: 'Monument Extended';
 	font-size: 12px;
 }
@@ -135,25 +197,367 @@ header nav a {
 	margin: 0 40px;
 }
 
-header nav a:hover {
+.toggle-display {
+	display: none;
+}
+
+header nav a:hover, .intro-home nav a, .active-link, h3 {
 	background: -webkit-linear-gradient(180deg, #99CC6C, #CB50EA);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
+
+.big-text {
+	font-size: 24px;
+	line-height: 140%;
+}
+
+.big-text a {
+	color: #F5F1F1;
+	text-decoration: underline;
+}
+
+/* Homepage */
+
+.intro-home {
+	position: absolute;
+	padding-left: 5vw;
+	padding-right: 5vw;
+	bottom: 25vh;
+}
+
+.intro-home h2 {
+	margin-bottom: 16px;
+}
+
+.intro-home nav {
+	display: flex;
+	align-items: center;
+	color: #CB50EA;
+	margin-top: 32px;
+}
+
+.intro-home nav span:first-child {
+	margin-right: 80px;
+}
+
+.intro-home nav a:hover {
+	text-decoration: underline;
+	text-decoration-color: #CB50EA;
+}
+
+/* /Homepage */
+
 
 footer {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	overflow: hidden;
-	font-family: 'Monument Extended';
-	font-size: 10px;
-	position: absolute;
-	bottom: 0;
 	width: 100%;
-	padding: 2% 5%;
+	padding: 3vh 5vw;
 }
 
 footer span a:hover {
 	text-decoration: underline;
 }
+
+.mobile-menu-nav {
+	display: none;
+}
+
+	#mobile-nav {
+		display: none;
+	}
+
+
+/* About Section */
+
+.about, .about-info, .columns {
+	display: flex;
+}
+
+.about {
+	padding-top: 15vh;
+	justify-content: space-between;
+	padding-left: 5vw;
+	padding-right: 5vw;
+	flex-direction: row;
+	width: 100%;
+}
+
+.about h4, .about p, .about ul {
+	margin-bottom: 16px;
+}
+
+.about a {
+	text-decoration: underline;
+	color: #F5F1F1;
+}
+
+.about-photo {
+	object-fit: cover;
+	object-position: top;
+	width: 43%;
+	height: 350px;
+	margin-top: 3.5vh;
+
+}
+
+.about-info {
+	position: relative;
+	flex-direction: column;
+	padding-left: 16px;
+	width:57%;
+}
+
+.columns {
+	justify-content: space-between;
+}
+
+/* /About Section */
+
+/* Projects Section */
+
+.gallery {
+	padding-top: 15vh;
+	width: 100%;
+}
+
+.gallery h3 {
+margin-top: 3.5vh;
+margin-bottom:32px;
+
+}
+.gallery h3, .project-title {
+	padding-left: 5vw;
+}
+
+.project img {
+	background-color: #7C848C;
+	width:33%;
+	height: 100%;
+	object-fit: cover;
+	overflow: hidden;
+}
+
+.project {
+	display: flex;
+	width: 100%;
+	height: 200px;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 16px;
+	background-color: #2B2D30;
+}
+
+.project img {
+	filter: grayscale(1);
+	transform: all 0.2s ease-out;
+}
+
+.project:hover > img {
+	filter: grayscale(0);
+}
+
+.project-title h4 {
+	color: #F5F1F1;
+	margin-top:-3vh;
+}
+
+.project:hover > .project-title h4 {
+	background: -webkit-linear-gradient(180deg, #99CC6C, #CB50EA);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+/* /Projects Section */
+
+/* Project Page Covers */
+
+.project-cover {
+	height: 100vh;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.la-canasta {
+		background-image: url(../assets/images/home-background.png);
+}
+
+.vibe {
+		background-image: url(../assets/images/vibe-cover.png);
+}
+
+.destino-amazonas {
+		background-image: url(../assets/images/destino-amazonas-cover.png);
+}
+
+.nba {
+		background-image: url(../assets/images/nba-cover.png);
+}
+
+.olympic-channel {
+		background-image: url(../assets/images/olympic-channel-cover.png);
+}
+
+.kitkat {
+		background-image: url(../assets/images/kitkat-cover.png);
+}
+
+.sunrise {
+		background-image: url(../assets/images/sunrise-cover.png);
+}
+
+.avalanche {
+		background-image: url(../assets/images/avalanche-cover.png);
+}
+
+.float {
+		background-image: url(../assets/images/float-cover.png);
+}
+
+/* /Project Page Covers */
+
+/* Project Page */
+
+.progress-bar {
+	background: -webkit-linear-gradient(180deg, #99CC6C, #CB50EA);
+	position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+	z-index: 2;
+}
+
+.project-info {
+	margin-bottom: 8vh;
+}
+
+.project-intro, .projects-nav {
+	display: flex;
+	justify-content: space-between;
+}
+
+.project-intro, .project-content {
+	padding-left: 5vw;
+	padding-right: 5vw;
+}
+
+.project-intro div:last-child {
+	width: 40%;
+	padding-top: 3vh;
+}
+
+.project-info, .project-content {
+	padding-top: 4vh;
+}
+
+.project-content img {
+	max-width: 100%;
+}
+
+.project-intro p, .big-text-space {
+	margin-bottom: 16px;
+}
+
+.caption {
+	margin-top: 8px;
+}
+
+.main-info {
+	width: 60%;
+	padding-bottom: 4vh;
+}
+
+.main-info, .add-space {
+		padding-top: 4vh;
+}
+
+.projects-nav {
+	width: 100%;
+	height: 200px;
+	align-items: center;
+	margin-bottom: 16px;
+	background-color: #2B2D30;
+}
+
+.projects-nav h5 {
+	margin-bottom: -3vh;
+}
+
+.project-info a {
+	text-decoration: underline;
+}
+
+.project-info a, .projects-nav a {
+	color: #F5F1F1;
+}
+
+.projects-nav a h4:hover {
+	background: -webkit-linear-gradient(180deg, #99CC6C, #CB50EA);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.prev-project {
+	padding-left: 5vw;
+}
+
+.next-project {
+	text-align: right;
+	padding-right: 5vw;
+}
+
+/* /Project Page */
+
+
+/* Media Queries */
+
+}
+
+@media (max-width: 615px) {
+
+	#mobile-nav {
+		z-index: 1;
+		display: flex;
+		position: fixed;
+		flex-direction: column;
+		justify-content: space-between;
+		padding-top: 4%;
+		padding-left: 5%;
+		padding-bottom: 35vh;
+		top: 0;
+		right: -100vw;
+		width: 100vw;
+		height: 100vh;
+		background-color: #2B2D30;
+		color: #F5F1F1;
+
+
+		transition: right 0.5s ease-in-out;
+	}
+
+	#mobile-nav div {
+		display: flex;
+		flex-direction: column;
+		padding-left: 1.5%;
+	}
+
+	#mobile-nav div a {
+		color: #F5F1F1;
+		padding-bottom: 16px;
+	}
+
+	#mobile-nav a {
+		width: max-content;
+	}
+
+	#mobile-nav.open {
+		right: 0;
+	}
+
+}
+
+/* /Media Queries */
