@@ -1,3 +1,14 @@
+// Hide video controls
+
+
+const videoTag = document.querySelector("video.background-video")
+
+  window.addEventListener("load", function(){
+    videoTag.controls = false;
+  })
+
+// /Hide video controls
+
 // Progress bar functionality
 
   const bodyTag = document.querySelector("body")

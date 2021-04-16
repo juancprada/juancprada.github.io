@@ -206,7 +206,7 @@ a {
 	z-index: -1;
 }
 
-video::-webkit-media-controls-enclosure {
+video::-webkit-media-controlsS {
 		display: none !important;
 }
 
@@ -347,6 +347,7 @@ h4 {
 	position: absolute;
 	right: 4vw;
 	z-index: 2;
+	mix-blend-mode: overlay;
 }
 
 .project-thumbnail img {
@@ -354,6 +355,8 @@ h4 {
 	height: 320px;
 	padding-bottom: 1.5vh;
 	width: auto;
+	filter: grayscale(0.85)
+	opacity(0.6);
 }
 
 /* /Thumbnails */
