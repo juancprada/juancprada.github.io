@@ -206,8 +206,10 @@ a {
 	z-index: -1;
 }
 
-video::-webkit-media-controlsS {
-		display: none !important;
+video::-webkit-media-controls-panel, video::-moz-media-controls-panel,
+video::-webkit-media-controls-start-playback-button, video::-moz-media-controls-start-playback-button {
+display: none !important;
+opacity: 1 !important;
 }
 
 .container {
