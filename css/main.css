@@ -206,6 +206,10 @@ a {
 	z-index: -1;
 }
 
+video::-webkit-media-controls {
+    display:none !important;
+}
+
 .container {
 	position: relative;
 	padding: 4vh 4vw;
