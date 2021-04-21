@@ -577,12 +577,14 @@ footer {
 		flex-direction: column;
 	}
 
+/*
 	.project-intro .two-items {
 		padding-top: 2vh;
 	}
 
+*/
 
-	.project-intro div:first-child {
+	.project-intro .add-space-bottom {
 		padding-bottom: 4vh;
 	}
 
@@ -692,6 +694,10 @@ footer {
 
 	header nav {
 		height: 50px;
+	}
+
+	.esp-link {
+		font-size: 10px;
 	}
 
 	footer nav {
