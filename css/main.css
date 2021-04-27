@@ -357,8 +357,8 @@ h4 {
 	height: 320px;
 	padding-bottom: 1.5vh;
 	width: auto;
-	filter: grayscale(0.85)
-	opacity(0.6);
+	filter: grayscale(0.8);
+	opacity: 0.8;
 }
 
 /* /Thumbnails */
